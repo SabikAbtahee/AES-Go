@@ -3,18 +3,7 @@ const { app, BrowserWindow } = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
-function loadFileAsText() {
-	var fileToLoad = document.getElementById('fileToLoad').files[0];
-	console.log(fileToLoad);
-	read = new FileReader();
 
-	read.readAsBinaryString(fileToLoad);
-
-	read.onloadend = function() {
-		console.log(read.result);
-	};
-
-}
 
 function createWindow () {
   // Create the browser window.

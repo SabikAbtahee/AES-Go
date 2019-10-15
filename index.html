@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Advanced Encryption Standard </title>
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
-  </head>
-  <body>
-     <input type="file" name='fileToLoad' id='fileToLoad'>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Encryption Standard </title>
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self';" /> -->
+  <style>
+    .flex-row{
+      display: flex;
+      flex-direction: row;
+    }
+    .flex-column{
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-center{
+      align-items: center;
+      justify-items: center;
+    }
+    
+  
+  </style>
+</head>
+
+<body>
+  <div class='flex-row flex-center' style="width: 100%;">
+  <div class='flex-column flex-center'>
+    <input type='text' name='encrypt_password' id='encrypt_password'>
+    <input type="file" name='fileToLoad' id='fileToLoad'>
     <button onclick="loadFileAsText()">Load Selected File</button>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+    <button type="button" class="btn btn-outline-primary" onclick="writeToFile()"> Save to File </button>
+
+  </div>
+
+  
+  
+
+  <div class='flex-column flex-center'>
+      <input type='text' name='decrypt_password' id='decrypt_password'>
+      <input type="file" name='fileToLoad' id='fileToLoad'>
+      <button onclick="loadFileAsText()">Load Selected File</button>
+    </div>
+  </div>
+
+  <script src="./file.js"></script>
+  <script src="./AES.js"></script>
+</body>
+
 </html>
