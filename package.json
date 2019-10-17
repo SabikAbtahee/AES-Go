@@ -12,6 +12,8 @@
     "electron": "^6.0.12"
   },
   "dependencies": {
-    "bootstrap-material-design": "^4.1.1"
+    "bootstrap-material-design": "^4.1.1",
+    "electron-packager": "^14.0.6",
+    "file-saver": "^2.0.2"
   }
 }

@@ -448,6 +448,6 @@ Utf8.decode = function (strUtf) {
 var password = 'L0ck it up saf3';
 var plaintext = 'pssst ... Ä‘on\'t tell anyøne!';
  
-var ciphertext = Aes.Ctr.encrypt(plaintext, password, 256);
+var ciphertext = Aes.Ctr.encrypt(plaintext, password, 128);
 console.log(ciphertext);
-var origtext = Aes.Ctr.decrypt(ciphertext, password, 256);
+var origtext = Aes.Ctr.decrypt(ciphertext, password, 128);

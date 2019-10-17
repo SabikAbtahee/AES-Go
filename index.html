@@ -10,42 +10,61 @@
   <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
   <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self';" /> -->
   <style>
-    .flex-row{
+    .flex-row {
       display: flex;
       flex-direction: row;
     }
-    .flex-column{
+
+    .flex-column {
       display: flex;
       flex-direction: column;
     }
-    .flex-center{
+
+    .flex-center {
       align-items: center;
       justify-items: center;
     }
-    
-  
   </style>
 </head>
 
 <body>
-  <div class='flex-row flex-center' style="width: 100%;">
-  <div class='flex-column flex-center'>
-    <input type='text' name='encrypt_password' id='encrypt_password'>
-    <input type="file" name='fileToLoad' id='fileToLoad'>
-    <button onclick="loadFileAsText()">Load Selected File</button>
-    <button type="button" class="btn btn-outline-primary" onclick="writeToFile()"> Save to File </button>
+  <!-- <div class='flex-row flex-center' style="width: 100%;"> -->
+  <div class='flex-column'>
+    <input style="margin:8px;" type='text' name='password' id='password' placeholder="Enter Key">
+    <input style="margin:8px;" type="file" name='fileToLoad' id='fileToLoad'>
+    <button style="margin:8px;" type="button" class="btn btn-outline-primary"
+      onclick="loadFileAsText('en')">Encrypt</button>
+    <button style="margin:8px;" type="button" class="btn btn-outline-primary"
+      onclick="loadFileAsText('de')">Decrypt</button>
+
+    <div class='flex-row'>
+      <div style='color:blue;margin-right: 16px;'>
+        Input:
+      </div>
+      <div id='input'>
+
+      </div>
+    </div>
+    <div class='flex-row'>
+      <div style='color:red;margin-right: 16px;'>
+        Output:
+      </div>
+      <div id='output'>
+
+      </div>
+    </div>
 
   </div>
 
-  
-  
 
-  <div class='flex-column flex-center'>
+
+
+  <!-- <div class='flex-column flex-center'>
       <input type='text' name='decrypt_password' id='decrypt_password'>
       <input type="file" name='fileToLoad' id='fileToLoad'>
       <button onclick="loadFileAsText()">Load Selected File</button>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 
   <script src="./file.js"></script>
   <script src="./AES.js"></script>
