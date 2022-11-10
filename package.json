@@ -9,7 +9,7 @@
   "author": "Sabik Abtahee",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^18.3.7"
   },
   "dependencies": {
     "bootstrap-material-design": "^4.1.1",
